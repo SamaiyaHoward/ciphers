@@ -41,4 +41,8 @@
 #   3 - Print the result to the user.
 #
 # WRITE CODE BELOW #
+plain = ' abcdefghijklmnopqrstuvwxyz'
+cipher = ' nopqrstuvwxyzabcdefghijklm'
 
+
+#cipher a = plain[4], 

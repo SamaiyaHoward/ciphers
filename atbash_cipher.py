@@ -1,5 +1,5 @@
-# author:
-# date:
+# author: Samaiya Howard
+# date: July 29, 2021
 
 # difficulty: easy
 
@@ -43,3 +43,65 @@
 #   2 - Remember that lists can be built up, meaning it may be useful to start with an empty list.
 #
 # WRITE DOWN THE STEPS BEFORE ATTEMPTING THE PROGRAM
+
+# Step 1
+lower_alphabet = ' abcdefghijklmnopqrstuvwxyz.,?!'
+lower_cipher_alphabet = ' zyxwvutsrqponmlkjihgfedcba'
+upper_alphabet = ' abcdefghijklmnopqrstuvwxyz.,?!'.upper()
+upper_cipher_alphabet = ' zyxwvutsrqponmlkjihgfedcba'.upper()
+
+# Step 2
+plain_text = input('enter a word: ')
+cipher_text = ''
+
+# Step 5 --> Loop is good
+for i in range(len(plain_text)):
+    current_letter = plain_text[i]  # step 3 part a
+    if current_letter in lower_alphabet:
+        print('Current letter', current_letter )
+        position = lower_alphabet.find(current_letter)  # step 3 part b
+        print('position', position)
+        new_cipher = lower_cipher_alphabet[position]  # step 3 part c
+        cipher_text = cipher_text + new_cipher # step 4
+        print(cipher_text)
+    elif current_letter in upper_alphabet:
+        print('Current letter', current_letter )
+        position = upper_alphabet.find(current_letter)  # step 3 part b
+        print('position', position)
+        new_cipher = upper_cipher_alphabet[position]  # step 3 part c
+        cipher_text = cipher_text + new_cipher # step 4
+        print(cipher_text)
+    else:
+        print(current_letter)
+
+# 1 --> Handle spaces and punctuation
+#           If there is a space or punctuation, then you should
+#           insert it to the cipher text as is
+#
+# 2 --> Handle Uppercase
+#           I want you to maintain case.
+
+
+
+#DECODING Cipher
+ciphered_text = input('enter a text in cipher code: ')
+uncipher_text = ''
+
+for i in range(len(ciphered_text)):
+    current_letter = ciphered_text[i]  # step 3 part a
+    if current_letter in lower_cipher_alphabet:
+        print('Current letter', current_letter )
+        position = lower_cipher_alphabet.find(current_letter)  # step 3 part b
+        print('position', position)
+        new_uncipher = lower_alphabet[position]  # step 3 part c
+        uncipher_text = uncipher_text + new_uncipher # step 4
+        print(uncipher_text)
+    elif current_letter in upper_cipher_alphabet:
+        print('Current letter', current_letter )
+        position = upper_cipher_alphabet.find(current_letter)  # step 3 part b
+        print('position', position)
+        new_uncipher = upper_alphabet[position]  # step 3 part c
+        uncipher_text = uncipher_text + new_uncipher # step 4
+        print(uncipher_text)
+    else:
+        print(uncipher_text + current_letter)

@@ -61,3 +61,8 @@
 #
 # WRITE CODE BELOW #
 
+userinput = input('enter a word: ')
+
+for i in range (len(userinput[:7])):
+    print(userinput[i], '.' * 3, end" ")
+
